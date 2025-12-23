@@ -1,0 +1,17 @@
+{{- if .Values.configmap.create -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configmap.name | default (printf "%s-config" .Chart.Name) }}
+  labels:
+    app.kubernetes.io/name: {{ .Chart.Name }}
+  namespace: {{ .Values.namespace | default .Chart.Name }}
+data:
+{{- if .Values.configmap.data }}
+  {{- range $key, $val := .Values.configmap.data }}
+  {{ $key }}: {{ $val | quote }}
+  {{- end }}
+{{- else }}
+  {}
+{{- end }}
+{{- end -}}
