@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  rgw-exporter:
+  - apiVersion: v2
+    appVersion: "0.1"
+    created: "2025-12-23T14:30:39.716340008Z"
+    description: A Helm chart for Kubernetes
+    digest: 2ae578f7a9ac6ca7b6b22b484f098c6fdf66706f4ba6221e53ba6b912b6a27b9
+    name: rgw-exporter
+    type: application
+    urls:
+    - https://github.com/boxstep/rgw-exporter-chart/releases/download/rgw-exporter-0.1.1/rgw-exporter-0.1.1.tgz
+    version: 0.1.1
+generated: "2025-12-23T14:30:39.716347252Z"
